@@ -37,10 +37,21 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.0.3",
     "concurrently": "^5.1.0",
+    "cz-conventional-changelog": "3.1.0",
     "electron": "^8.1.0",
     "electron-builder": "^22.4.0",
+    "husky": "^4.2.3",
     "wait-on": "^4.0.1"
   },
   "description": "A React and Electron app test",
@@ -49,5 +60,10 @@
     "appId": "<com.electron-react>"
   },
   "main": "public/electron.js",
-  "homepage": "./"
+  "homepage": "./",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
