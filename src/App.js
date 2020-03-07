@@ -2,21 +2,19 @@ import React, { useState, useRef } from "react";
 import "./App.css";
 
 function App() {
-  const binary = useRef();
+  const ref = useRef();
   const [err, setErr] = useState("");
   const [message, setMessage] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (binary.current !== undefined) {
-      if (!binary.current.match("^[0-1]+$")) {
+    if (ref.current !== undefined) {
+      if (!ref.current.match("^[0-1]+$")) {
         setErr("Números binários só podem conter 0 e 1");
         setMessage("");
       } else {
         setErr("");
-        setMessage(
-          `O valor digitado em decimal é ${parseInt(binary.current, 2)}`
-        );
+        setMessage(`O valor digitado em decimal é ${parseInt(ref.current, 2)}`);
       }
     } else {
       setErr("O campo está vazio. Digite um número binário para prosseguir");
@@ -36,12 +34,12 @@ function App() {
         <label className="form-label">Digite um valor em binário: </label>
 
         <input
-          defaultValue={binary.current}
+          defaultValue={ref.current}
           class="input-text"
           type="text"
-          name="binary"
-          id="binary"
-          onChange={e => (binary.current = e.target.value)}
+          name="ref"
+          id="ref"
+          onChange={e => (ref.current = e.target.value)}
         />
         <button className="submit-button" type="submit">
           Converter!
