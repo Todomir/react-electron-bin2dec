@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Domine|Roboto&display=swap");
+
+html,
+body {
+  height: 100%;
+  background-color: #2b3a67;
+  color: #ffff;
+}
+
+.App {
+  width: 700px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+h1,
+h3 {
+  font-family: "Domine", serif;
+  margin-bottom: 10px;
+}
+
+form {
+  margin: 30px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  height: 30px;
+  width: 300px;
+  background: none;
+  color: #ffff;
+  border: 2px solid #ffff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+form label {
+  margin: 10px;
+}
+
+form button {
+  margin: 10px;
+  width: 200px;
+  height: 40px;
+  font-family: "Domine", serif;
+  font-size: 16px;
+  background-color: #fffd82;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.24);
+}
