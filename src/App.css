@@ -3,7 +3,7 @@
 html,
 body {
   height: 100%;
-  background-color: #230c33;
+  background-color: #341749;
   color: #ffff;
 }
 
@@ -49,18 +49,64 @@ form label {
   margin: 10px;
 }
 
-form button {
-  margin: 10px;
-  width: 200px;
-  height: 40px;
-  font-family: "Domine", serif;
-  font-size: 16px;
-  background-color: #592e83;
-  color: #ffff;
-  border-radius: 5px;
-  border: none;
+button {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
   cursor: pointer;
-  -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.24);
-  box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.24);
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.submit-button {
+  padding: 1.25em 2em;
+  border: 2px solid #230c33;
+  border-radius: 0.75em;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #9e4ce2;
+  transform-style: preserve-3d;
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.submit-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #6f37af;
+  box-shadow: 0 0 0 2px #230c33, 0 0.625em 0 0 #3a125a;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.submit-button:hover {
+  background: #a75bda;
+  transform: translate(0, 0.25em);
+}
+
+button.submit-button:hover::before {
+  box-shadow: 0 0 0 2px #230c33, 0 0.5em 0 0 #3a125a;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.submit-button:active {
+  background: #a75bda;
+  transform: translate(0, 0.75em);
+}
+
+button.submit-button:active::before {
+  box-shadow: 0 0 0 2px #230c33, 0 0 #3a125a;
+  transform: translate3d(0, 0, -1em);
 }
